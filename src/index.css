@@ -1,0 +1,40 @@
+.fast-bg-img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fbimg__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  visibility: hidden;
+}
+.fbimg__img.loaded {
+  visibility: visible;
+}
+.fbimg__thumb-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  filter: blur(20px);
+  /* this is needed so Safari keeps sharp edges */
+  transform: scale(1);
+  transition: opacity 0.4s linear;
+  visibility: visible;
+}
+.fbimg__thumb-img.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
